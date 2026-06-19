@@ -35,9 +35,6 @@ OUTPUT_PATH = "./data/split_indices.npz"
 
 def main():
     rng = np.random.default_rng(SEED)
-
-    # Downloads CIFAR-10 train set if not already present. We only need
-    # the labels here, not the images, to figure out the stratified split.
     train_dataset = torchvision.datasets.CIFAR10(
         root=DATA_DIR, train=True, download=True
     )
