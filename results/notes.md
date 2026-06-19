@@ -1,0 +1,3 @@
+## Training Notes
+
+**Train/val gap:** Train accuracy reached 99.5% by epoch 35 while val accuracy was 93.9% — a ~5.6pt gap. This is expected and useful here: cross-entropy loss never fully bottoms out, so even after train accuracy plateaus (~epoch 28-30), gradient descent keeps pushing softmax outputs toward more extreme confidence. OneCycleLR's low-LR annealing phase (last ~10 epochs) gave the model room to do exactly that — train loss kept falling (to 0.02) well after train accuracy stopped improving, meaning that final stretch was almost pure confidence-sharpening rather than genuine learning. This is a classic precursor to overconfidence and should be acknowledged explicitly in the final report rather than presenting 93.9% as a clean, unqualified number.
