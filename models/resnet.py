@@ -1,8 +1,8 @@
 """
 CIFAR-style ResNet-18.
 
-This is NOT torchvision.models.resnet18. This file implements the CIFAR variant 
-from the original ResNet paper (He et al., 2015) and as commonly used in 
+This is NOT torchvision.models.resnet18. This file implements the CIFAR variant
+from the original ResNet paper (He et al., 2015) and as commonly used in
 calibration literature (Guo et al., 2017 use this exact family of architectures)
 
 Stem: single 3x3 conv, stride 1, no maxpool.
