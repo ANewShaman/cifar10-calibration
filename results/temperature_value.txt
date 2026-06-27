@@ -1,0 +1,2 @@
+Fitted temperature T = 1.439705
+(T > 1 means the model was overconfident; T < 1 would mean underconfident)
